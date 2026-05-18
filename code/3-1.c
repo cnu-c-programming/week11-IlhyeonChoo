@@ -8,11 +8,17 @@ int sub(int a, int b) { return a - b; }
 int mul(int a, int b) { return a * b; }
 
 int compute(int a, int b, BinOp op) {
-  if (op == NULL) {
+  // if (op == NULL) {
+  //   printf("Null pointer\n-1\n");
+  //   exit(0);
+  // }
+  // return op(a, b);
+  if (op) {
+    return op(a, b);
+  } else {
     printf("Null pointer\n-1\n");
     exit(0);
   }
-  return op(a, b);
 }
 
 int main() {
